@@ -1,0 +1,20 @@
+body {
+	background-color: black;	
+}
+
+.img-hover .img-responsive{
+	height:360px;
+	display: block;
+	margin: 0 auto;
+}
+
+.img-hover .img-responsive:hover{
+	height:370px;
+	display: block;
+	margin: 0 auto;
+}
+
+.row {
+	height:400px;
+	text-align: center;
+}
