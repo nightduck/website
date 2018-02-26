@@ -36,7 +36,7 @@ if (!is_null($feed)) {
     #Fetch basic metadata regarding 10 pages
     #TODO: Let user have a larger feed by making the value 10 dependant on variable
     $stmt = $conn->query("SELECT id, title, subtitle, description, thumbnail, template
-                                    FROM pages " . $filter . " ORDER BY pub_date desc LIMIT " . str($count) . $offset);
+                                    FROM pages " . $filter . " ORDER BY pub_date desc LIMIT " . $count . $offset);
 
     $pages = $stmt->fetchall();
 } catch (PDOException $e) {
@@ -113,7 +113,11 @@ if (!is_null($feed)) {
     <!-- Page Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Welcome to Oren's Personal Website</h1>
+            <h1 class="page-header"><?php
+                if (is_null($feed)) {
+                    echo "Welcome to Oren's Personal Website";
+                } else echo ucfirst($feed);
+            ?></h1>
         </div>
     </div>
     <!-- /.row -->
@@ -141,7 +145,7 @@ if (!is_null($feed)) {
         <?php
         foreach ($pages as $row) {
             $link = sprintf("/%s?id=%s", $row['template'], base64_encode(sprintf("%03d",$row['id'])));
-            $titleinfo = sprintf("<h3>%s<br/><small>Maybe filled with subtitle</small></h3>",$row['title']);
+            $titleinfo = sprintf("<h3>%s<br/><small>%s</small></h3>",$row['title'], $row['subtitle']);
 
             echo "<div class='row article'><div class='col-md-4'>";
             echo sprintf("<a href='%s'>", $link);
