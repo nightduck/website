@@ -144,7 +144,7 @@ if (!is_null($feed)) {
 
         <?php
         foreach ($pages as $row) {
-            $link = sprintf("/%s?id=%s", $row['template'], base64_encode(sprintf("%03d",$row['id'])));
+            $link = sprintf("/%s?id=%s", $row['template'] . ".php", base64_encode(sprintf("%03d",$row['id'])));
             $titleinfo = sprintf("<h3>%s<br/><small>%s</small></h3>",$row['title'], $row['subtitle']);
 
             echo "<div class='row article'><div class='col-md-4'>";
