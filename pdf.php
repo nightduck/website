@@ -104,17 +104,17 @@ try {
 
             <hr>
 
-            <!-- Date/Time -->
-            <p><span class="glyphicon glyphicon-time"></span> Posted on
-                <?php
-                $date = date('M d, Y', $pub_date);
-                $time = date('H:i A', $pub_date);
-                echo $date . " at " . $time . " UTC";
-                ?>
-            </p>
-
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on
+                    <?php
+                    $date = date('M d, Y', $pub_date);
+                    $time = date('H:i A', $pub_date);
+                    echo $date . " at " . $time . " UTC";
+                    ?>
+                </p>
 
                 <hr>
 
