@@ -34,12 +34,9 @@ mess up how the URL is parsed. After given the base64 encoded ID, the homepage w
 appropriate template and when the template is passed that same ID, it'll look up the corresponding row in
 the SQL table and populate itself using the values in that row.
 
-I also suggest using [mywebsql](http://mywebsql.net/) tool. It's useful as a rudimentary content management
-system
-
 Commands to run
 
-1. "mysql -u root --where="CLAUSE HERE" pages > import.sql"
+1. "mysqldump -u root --where="CLAUSE HERE" pages > import.sql"
 2. copy import.sql to the development server
 3. Make edits to import.sql if needed
 4. On server "mysql -u root website < import.sql".
