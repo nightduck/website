@@ -199,7 +199,7 @@ try {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Contact: inquiries@orenp.com</p>
+                    <p>Contact: inquiries@orenbell.com</p>
                     <a href="https://gandi.net"><img src="/rsc/GANDI_SSL_logo_en.png" alt="Secured by Gandi.net"/></a>
                 </div>
             </div>

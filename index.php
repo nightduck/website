@@ -53,7 +53,7 @@ if (!is_null($feed)) {
     <meta name="description" content="Personal website. I do what I want. Blogging for now. More features to come"/>
     <meta property="og:url" content="http://orenp.com"/>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="The Nightduck's Space" />
+    <meta property="og:title" content="Oren's Blog" />
     <meta property="og:description" content="Personal website. I do what I want. Blogging for now. More features to come"/>
     <meta property="og:image" content="http://orenp.com/rsc/insertlogohere.png"/>
 
@@ -185,7 +185,7 @@ if (!is_null($feed)) {
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Contact: inquiries@orenp.com</p>
+                <p>Contact: inquiries@orenbell.com</p>
                 <a href="https://gandi.net"><img src="rsc/GANDI_SSL_logo_en.png" alt="Secured by Gandi.net"/></a>
             </div>
         </div>
