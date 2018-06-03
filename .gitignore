@@ -1,0 +1,17 @@
+# Directories
+misc/
+.settings/
+.idea/
+research/
+backups/
+
+# Individual files
+.buildpath
+.project
+info.php
+
+# File types
+*.png
+*.jpg
+*.gif
+*.tgz
