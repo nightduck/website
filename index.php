@@ -50,12 +50,12 @@ if (!is_null($feed)) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal website. I do what I want. Blogging for now. More features to come"/>
-    <meta property="og:url" content="http://orenp.com"/>
+    <meta name="description" content="Personal website. I do what I want. Blogging for now. More features to come maybe"/>
+    <meta property="og:url" content="https://orenbell.com"/>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Oren's Blog" />
-    <meta property="og:description" content="Personal website. I do what I want. Blogging for now. More features to come"/>
-    <meta property="og:image" content="http://orenp.com/rsc/insertlogohere.png"/>
+    <meta property="og:description" content="Personal website. I do what I want. Blogging for now. More features to come maybe"/>
+    <meta property="og:image" content="https://orenbell.com/rsc/insertlogohere.png"/>
 
     <!--TODO: Modify the title, or add a subtitle dependant on the $feed variable-->
     <title>The Nightduck's Space</title>
@@ -93,10 +93,12 @@ if (!is_null($feed)) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")
+                        . "://$_SERVER[HTTP_HOST]"; ?>">Home</a>
                 </li>
                 <li>
-                    <a href="https://orenp.com/research">Research</a>
+                    <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")
+                        . "://$_SERVER[HTTP_HOST]/research"; ?>">Research</a>
                 </li>
                 <li>
                     <a href="https://github.com/nightduck">Github</a>
@@ -143,6 +145,7 @@ if (!is_null($feed)) {
         -->
 
         <?php
+        # Display list of article obtained in sql query before head tag
         foreach ($pages as $row) {
             $link = sprintf("/%s?id=%s", $row['template'] . ".php", base64_encode(sprintf("%03d",$row['id'])));
             $titleinfo = sprintf("<h3>%s<br/><small>%s</small></h3>",$row['title'], $row['subtitle']);
@@ -181,7 +184,7 @@ if (!is_null($feed)) {
         <!--TODO: populate sidebar-->
     </div>
 
-    <!-- <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="row">
             <div class="col-lg-12">

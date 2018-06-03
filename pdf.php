@@ -32,7 +32,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <?php 
-    echo '<meta property="og:url" content="orenp.com/article?id=' . base64_encode(sprintf("%06d",$id)) . '"/>'
+    echo '<meta property="og:url" content="orenbell.com/article?id=' . base64_encode(sprintf("%06d",$id)) . '"/>'
     ?>
     <meta property="og:url" content=""/>
     <meta property="og:type" content="article" />
@@ -77,7 +77,7 @@ try {
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")
-                        . "://$_SERVER[HTTP_HOST]"; ?>">Home</a>
+                            . "://$_SERVER[HTTP_HOST]"; ?>">Home</a>
                     </li>
                     <li>
                         <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")

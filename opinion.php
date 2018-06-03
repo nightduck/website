@@ -32,7 +32,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <?php 
-    echo '<meta property="og:url" content="orenp.com/article?id=' . base64_encode(sprintf("%03d",$id)) . '"/>'
+    echo '<meta property="og:url" content="orenbell.com/article?id=' . base64_encode(sprintf("%03d",$id)) . '"/>'
     ?>
     <meta property="og:url" content=""/>
     <meta property="og:type" content="article" />
@@ -76,10 +76,12 @@ try {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")
+                            . "://$_SERVER[HTTP_HOST]"; ?>">Home</a>
                     </li>
                     <li>
-                        <a href="https://orenp.com/research">Research</a>
+                        <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")
+                            . "://$_SERVER[HTTP_HOST]/research"; ?>">Research</a>
                     </li>
                     <li>
                         <a href="https://github.com/nightduck">Github</a>
