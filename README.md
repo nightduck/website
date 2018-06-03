@@ -36,9 +36,8 @@ the SQL table and populate itself using the values in that row.
 
 Commands to run
 
-1. "mysqldump -u root --where="CLAUSE HERE" pages > import.sql"
-2. copy import.sql to the development server
-3. Make edits to import.sql if needed
-4. On server "mysql -u root website < import.sql".
+1. CREATE VIEW publish AS SELECT * FROM pages WHERE \[CONDITION HERE\];
+2. Copy publish to production server
+3. UPDATE website.pages w RIGHT JOIN website.publish p ON (w.id = p.id);
 
 TODO: Make a python script to automate the syncing of new data
