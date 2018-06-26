@@ -4,6 +4,7 @@ misc/
 .idea/
 research/
 backups/
+admin/
 
 # Individual files
 .buildpath
@@ -15,3 +16,4 @@ info.php
 *.jpg
 *.gif
 *.tgz
+*.bak
