@@ -41,7 +41,7 @@ try {
     <meta property="og:image" content="<?php echo $thumbnail?>"/>
     <meta name="author" content="">
 
-    <title>TITLE</title>
+    <title><?php echo $title ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
