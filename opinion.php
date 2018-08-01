@@ -97,16 +97,16 @@ try {
 
         <div class="row">
 
+            <!-- Title -->
+            <h1><?php echo $title; ?></h1>
+            <h3><?php echo $subtitle; ?></h3>
+
+            <hr>
+
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
 
                 <!-- Blog Post -->
-
-                <!-- Title -->
-                <h1><?php echo $title; ?></h1>
-                <h3><?php echo $subtitle; ?></h3>
-
-                <hr>
 
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Posted on
