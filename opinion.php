@@ -34,7 +34,6 @@ try {
     <?php 
     echo '<meta property="og:url" content="orenbell.com/article?id=' . base64_encode(sprintf("%03d",$id)) . '"/>'
     ?>
-    <meta property="og:url" content=""/>
     <meta property="og:type" content="article" />
     <meta property="og:title" content="<?php echo $title ?>" />
     <meta property="og:title" content="<?php echo $description?>"/>
