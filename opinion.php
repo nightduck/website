@@ -32,7 +32,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <?php 
-    echo '<meta property="og:url" content="orenbell.com/article?id=' . base64_encode(sprintf("%03d",$id)) . '"/>'
+    echo '<meta property="og:url" content="https://orenbell.com/opinion?id=' . base64_encode(sprintf("%03d",$id)) . '"/>'
     ?>
     <meta property="og:type" content="article" />
     <meta property="og:title" content="<?php echo $title ?>" />
