@@ -18,7 +18,6 @@ try {
 	$sidebar = $row['sidebar'];
 	$subtitle = $row['subtitle'];
 	$thumbnail = $row['thumbnail'];
-	$header_img = $row['header_img'];
 	
 } catch (PDOException $e) {
 	echo "Connection failed: " . $e->getMessage();
