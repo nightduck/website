@@ -16,7 +16,7 @@ if (!is_null($id)) {
     #If the URL was passed an ID, then lookup the page and direct to the appropriate template.
     $stmt = $conn->query("SELECT template FROM pages WHERE id=" . (int)base64_decode($id));
     $row = $stmt->fetch();
-    $path = $row['template'] . "?id=" . $id;
+    $path = $row['template'] . ".php?id=" . $id;
     header('Location: ' . $path, true);
     exit();
 }
