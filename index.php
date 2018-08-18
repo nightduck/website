@@ -13,7 +13,7 @@ $count = 10;                #Display 10 articles on page
     
 
 if (!is_null($id)) {
-    #If the URL was passed an ID, then lookup the page and direct to the appropriate template
+    #If the URL was passed an ID, then lookup the page and direct to the appropriate template.
     $stmt = $conn->query("SELECT template FROM pages WHERE id=" . (int)base64_decode($id));
     $row = $stmt->fetch();
     $path = $row['template'] . "?id=" . $id;
@@ -28,11 +28,14 @@ if (!is_null($start)) {
 } else $offset = "";
 
 if (!is_null($feed)) {
+    #TODO: Replace this to find tags instead of templates
     #If a feed is specified, the user wants to look at a categorized list of pages. Pass this as a
-    #WHERE template = ... in the SQL query
-    $filter = " WHERE template='" . $feed . "'";
+    #WHERE template = ... in the SQL query. Ignore unpublished posts if lockfile present
+    $filter = " WHERE template='" . $feed . "'" . ((file_exists("unpublish.lock")) ? " AND published" : "");
+} else if (file_exists("unpublish.lock")) {
+    #Ignore unpublished posts if lockfile present
+    $filter = " WHERE published";
 } else $filter = "";
-
     #Fetch basic metadata regarding 10 pages
     #TODO: Let user have a larger feed by making the value 10 dependant on variable
     $stmt = $conn->query("SELECT id, title, subtitle, description, thumbnail, template

@@ -21,6 +21,7 @@ from your movie review. However, they both share common elements, for example:
   * Body html
   * Sidebar html
   * Template to render with
+  * Published
 
 Each page is stored as a row in an SQL table using the above elements as values. The table format above
 isn't strictly required. You can add your own columns, and not every page needs to fill every column. In
@@ -41,3 +42,8 @@ Commands to run
 3. UPDATE website.pages w RIGHT JOIN website.publish p ON (w.id = p.id);
 
 TODO: Make a python script to automate the syncing of new data
+
+The published flag indicates which posts should show on the public website. 0 means unpublished, 1 means published. The
+feeds on the site will check if the file unpublish.lock exists, and if it does, the feeds will not display unpublished
+articles. The staging site has no such lock file, and so unpublished articles can be viewed there while still in their
+drafting stage.

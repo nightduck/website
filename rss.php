@@ -14,10 +14,15 @@ try {
     $feed = $_GET['feed'];      # General category this'll filter the pages shown
 
     if (!is_null($feed)) {
+        #TODO: Replace this to find tags instead of templates
         # If a feed is specified, the user wants to look at a categorized list of pages. Pass this as a
-        # WHERE template = ... in the SQL query
-        $filter = " WHERE template='" . $feed . "'";
+        # WHERE template = ... in the SQL query. Ignore unpublished posts if on the main orenbell.com domain
+        $filter = " WHERE template='" . $feed . "'" . ((file_exists("unpublish.lock")) ? " AND published" : "");
         $title_ornament = " - " . $feed;    # TODO: Fetch display name here once template metadata db is added
+    } else if (file_exists("unpublish.lock")) {
+        #Ignore unpublished posts if lockfile present
+        $filter = " WHERE published";
+        $title_ornament = "";
     } else {
         $filter = "";
         $title_ornament = "";
