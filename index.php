@@ -31,8 +31,8 @@ if (!is_null($feed)) {
     #TODO: Replace this to find tags instead of templates
     #If a feed is specified, the user wants to look at a categorized list of pages. Pass this as a
     #WHERE template = ... in the SQL query. Ignore unpublished posts if lockfile present
-    $filter = " WHERE template='" . $feed . "'" . ((file_exists("unpublish.lock")) ? " AND published" : "");
-} else if (file_exists("unpublish.lock")) {
+    $filter = " WHERE template='" . $feed . "'" . ((file_exists("public-facing.lock")) ? " AND published" : "");
+} else if (file_exists("public-facing.lock")) {
     #Ignore unpublished posts if lockfile present
     $filter = " WHERE published";
 } else $filter = "";

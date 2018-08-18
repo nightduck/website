@@ -44,6 +44,6 @@ Commands to run
 TODO: Make a python script to automate the syncing of new data
 
 The published flag indicates which posts should show on the public website. 0 means unpublished, 1 means published. The
-feeds on the site will check if the file unpublish.lock exists, and if it does, the feeds will not display unpublished
-articles. The staging site has no such lock file, and so unpublished articles can be viewed there while still in their
-drafting stage.
+feeds on the site will check if the file public-facing.lock exists, and if it does, the feeds will not display
+unpublished articles. The staging site has no such lock file, and so unpublished articles can be viewed there while
+still in their drafting stage.

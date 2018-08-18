@@ -17,9 +17,9 @@ try {
         #TODO: Replace this to find tags instead of templates
         # If a feed is specified, the user wants to look at a categorized list of pages. Pass this as a
         # WHERE template = ... in the SQL query. Ignore unpublished posts if on the main orenbell.com domain
-        $filter = " WHERE template='" . $feed . "'" . ((file_exists("unpublish.lock")) ? " AND published" : "");
+        $filter = " WHERE template='" . $feed . "'" . ((file_exists("public-facing.lock")) ? " AND published" : "");
         $title_ornament = " - " . $feed;    # TODO: Fetch display name here once template metadata db is added
-    } else if (file_exists("unpublish.lock")) {
+    } else if (file_exists("public-facing.lock")) {
         #Ignore unpublished posts if lockfile present
         $filter = " WHERE published";
         $title_ornament = "";
