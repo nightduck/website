@@ -99,7 +99,7 @@ try {
         <!-- /.container -->
     </nav>
 
-    <?php echo body; ?>
+    <?php echo $body; ?>
 
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
