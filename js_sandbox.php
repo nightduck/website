@@ -61,7 +61,9 @@ try {
 
 </head>
 
-<body>
+<!--Ordinarily the body gets 70px of padding: 50 for the nav bar and 20 for good measure, but in this template, we get
+    rid of the excess 20. -->
+<body style="padding-top: 50px">
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
