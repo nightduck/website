@@ -65,7 +65,6 @@ try {
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -107,4 +106,8 @@ try {
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.js"></script>
 
-</body></html>
+</body>
+<script>
+    <?php echo $sidebar; ?>
+</script>
+</html>
