@@ -78,10 +78,6 @@ try {
                             . "://$_SERVER[HTTP_HOST]"; ?>">Home</a>
                     </li>
                     <li>
-                        <a href="<?php echo (isset($_SERVER['HTTPS']) ? "https" : "http")
-                            . "://$_SERVER[HTTP_HOST]?feed=pdf"; ?>">Research</a>
-                    </li>
-                    <li>
                         <a href="https://github.com/nightduck">Github</a>
                     </li>
                 </ul>
