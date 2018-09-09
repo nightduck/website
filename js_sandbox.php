@@ -37,7 +37,7 @@ try {
     <meta property="og:type" content="article" />
     <meta property="og:title" content="<?php echo $title ?>" />
     <meta property="og:title" content="<?php echo $description?>"/>
-    <meta property="og:image" content="<?php echo $thumbnail?>"/>
+    <meta property="og:image" content="<?php echo "rsc/" . $thumbnail?>"/>
     <meta name="author" content="">
 
     <title><?php echo $title ?></title>
