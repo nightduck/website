@@ -1,6 +1,8 @@
 Oren's Website
 ==========================================
 
+This is the php code for the primitive CMS I accidentally began coding. No longer under development because it turns out Wordpress exists.
+
 This project serves primarily as a backup for the php templates and static html of my personal website.
 If any of this setup is beneficial to you, feel free to use it. This README will serve as documentation
 for how to implement it in your system and write your own templates. On a production server, this repository
@@ -21,7 +23,7 @@ from your movie review. However, they both share common elements, for example:
   * header      - Optional field with HTML to put in header. Useful for custom javascript
   * description - Mandatory field with brief blurb about post, used when sharing on social media
   * body        - Mandatory field with bulk of content
-  * sidebar     - Optinal field with secondary content, typically for sidebar
+  * sidebar     - Optional field with secondary content, typically for sidebar
   * thumbnail   - Mandatory path to image acting as post's thumbnail
   * template    - Mandatory name of php document (sans extension) that will be used to render this post
   * published   - Mandatory flag indicating whether the post is in its final draft.
